@@ -36,6 +36,7 @@ export default function Page() {
         <p>// i'll add content on this page later</p>
         <p>// you can still check my github</p>
         <p><span className="text-[#4D5BCE]">const</span> <span className="text-[#43D9AD]">githubLink</span> <span className="text-white">=</span> <a href="https://github.com/GabrielDelechamp" target="_blank" className="text-[#FEA55F]">"https://github.com/GabrielDelechamp"</a></p>
+        <p><span className="text-[#4D5BCE]">const</span> <span className="text-[#43D9AD]">getRickRolled</span> <span className="text-white">=</span> <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUIcmlja3JvbGw%3D" target="_blank" className="text-[#FEA55F]">"https://www.youtube.com/watch?v=rickrolled"</a></p>
       </div>
     </main>
   );
