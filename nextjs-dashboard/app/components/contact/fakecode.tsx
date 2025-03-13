@@ -1,4 +1,10 @@
-export default function FakeCode({ name, email, message }) {
+interface FakeCode {
+  name: string;
+  email: string;
+  message: string;
+}
+
+export default function FakeCode({ name, email, message }:FakeCode) {
     const date = new Date();
   
     let day = date.getDate();
@@ -8,10 +14,15 @@ export default function FakeCode({ name, email, message }) {
     let currentDate = `${day}-${month}-${year}`;
   
     // Ajout de saut de ligne tous les 40 caractères
-    const formatMessage = (msg) => {
+    const formatMessage = (msg: string | null): string => {
+      if (msg === null) {
+        return '';
+      }
       if (msg.length <= 20) return msg;
-      return msg.match(/.{1,40}/g).join('\n'); // Découpe le message en morceaux de 40 caractères
+      return msg.match(/.{1,40}/g)?.join('\n') ?? ''; // Découpe le message en morceaux de 40 caractères
     };
+
+
   
     return (
       <div>

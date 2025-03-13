@@ -13,7 +13,7 @@ export interface Filters {
 
 interface SidebarProps {
   filters: Filters;
-  setFilters: (filters: Filters) => void;
+  setFilters: React.Dispatch<React.SetStateAction<Filters>>;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ filters, setFilters }) => {
@@ -35,7 +35,7 @@ const Sidebar: React.FC<SidebarProps> = ({ filters, setFilters }) => {
   const handleFilterChange = (techId: string): void => {
     setFilters((prev: Filters) => ({
       ...prev,
-      [techId]: !prev[techId]
+      [techId]: !prev[techId],
     }));
   };
 
