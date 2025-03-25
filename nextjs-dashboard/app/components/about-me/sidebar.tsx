@@ -1,6 +1,7 @@
 'use client';
+import SkillsSection from './skill-section';
+import HobbyRoom from './hobby-room';
 import React, { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -131,27 +132,7 @@ export default function AboutTabs() {
 
   const AboutMe = () => {
     return (
-      `
-## 🚀 À propos de moi  
-
-### 🎯 Mon parcours  Passionné par le développement web et les nouvelles technologies, je suis actuellement en deuxième année de **BTS SIO option SLAM**.  
-
-### 💻 Mes compétences  
-Je me spécialise dans la création d’applications **web et mobiles**, avec un accent sur les interfaces **responsives et optimisées pour l'expérience utilisateur**. Mes compétences principales incluent :  
-✅ **React, Laravel, Tailwind CSS, Supabase**  
-✅ Conception et gestion de bases de données  
-✅ Optimisation des performances  
-
-### 🔍 Mes projets  
-J’ai travaillé sur plusieurs projets concrets, notamment :  
-- **Carspot Analytics** : application d’analyse et d’interprétation graphique des données.  
-- **Gestionnaire d’absences** : développé en Laravel avec Bouncer et un système de notifications.  
-
-### 📢 À la recherche d’une alternance !  
-Je cherche une opportunité en alternance pour approfondir mes compétences en **architecture logicielle et optimisation des performances**.  
-
-Si mon profil vous intéresse, **contactez-moi !** 🚀  
-`
+      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas interdum massa id mi placerat, et auctor nisi blandit. Pellentesque sollicitudin quis sem faucibus laoreet. Sed egestas metus at nisi eleifend luctus. Mauris eget nulla at diam fermentum tristique. Donec neque elit, iaculis et nunc sit amet, eleifend fermentum elit. Phasellus ut mattis augue. Morbi a nisi in sem lacinia luctus vitae id eros. Fusce eget nibh vel arcu finibus egestas. Donec finibus leo sagittis cursus porta. In pellentesque eros eget ipsum ornare, eget lacinia erat dignissim.`
     );
   };
 
@@ -171,12 +152,12 @@ Si mon profil vous intéresse, **contactez-moi !** 🚀
             onSelect={handleSelect}
           >
             <SidebarItem value="aboutme" onSelect={handleSelect}>
-              about-me.txt
+              About Me
             </SidebarItem>
           </CollapsibleSection>
 
           <CollapsibleSection 
-            title="interests" 
+            title="career" 
             folderColor="text-green-400"
             onSelect={handleSelect}
           >
@@ -206,11 +187,21 @@ Si mon profil vous intéresse, **contactez-moi !** 🚀
       {/* Content Area with Tabs */}
       <div className="flex-1 p-6">
         <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsContent value="aboutme">
-          <div className="prose-sm prose-invert">
-            <ReactMarkdown>{AboutMe()}</ReactMarkdown>
-          </div>
-        </TabsContent>
+          <TabsContent value="aboutme">
+            <div className='flex flex-row'>
+              <pre className='w-[50%] whitespace-pre-wrap'>
+                {FormattedText(AboutMe())}
+              </pre>
+
+              <div className="w-[50%] flex flex-col justify-around gap-10">
+                <SkillsSection />
+                <HobbyRoom />
+              </div>
+            </div>
+            
+          </TabsContent>
+
+
 
           <TabsContent value="email">
             <h2 className="text-2xl font-bold mb-4">Email Contact</h2>
