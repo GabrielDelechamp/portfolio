@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ filters, setFilters }) => {
 
   return (
     <div className="w-[285px] flex-none p-4 border-r-2 border-[#1E2D3D]">
-      <CollapsibleSection title="Projects" folderColor="text-blue-400">
+      <CollapsibleSection title="Filtrer par technos" folderColor="text-blue-400">
         {technologies.map((tech) => (
           <div key={tech.id} className="flex items-center pt-3">
             <input

@@ -1,6 +1,6 @@
 import SkillMedal from "./skill-badges";
 
-const skills = ["React", "Laravel", "PHP", "GitHub", "CSS", "HTML", "Tailwind", "Supabase", "JavaScript", "Csharp"];
+const skills = ["React", "Laravel", "PHP", "GitHub", "CSS", "HTML", "Tailwind", "Supabase", "JavaScript", "Csharp"] as const;
 
 const SkillsSection = () => {
   return (

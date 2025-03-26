@@ -18,7 +18,11 @@ const skillIcons = {
   Database: <FaDatabase className="text-blue-600" />,
 };
 
-const SkillMedal = ({ skill }) => {
+interface SkillMedalProps {
+  skill: keyof typeof skillIcons;
+}
+
+const SkillMedal: React.FC<SkillMedalProps> = ({ skill }) => {
   return (
     <div className="w-16 h-16 flex items-center justify-center bg-gray-800 rounded-full shadow-lg border-2 border-gray-600">
       {skillIcons[skill] || <FaDatabase className="text-white" />}

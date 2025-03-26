@@ -18,7 +18,7 @@ const projectsData: Project[] = [
     title: "Eazy Media Website",
     description: `
     Ce site web m'a été demandé dans le cadre d'un stage pour Eazy Media. À l'aide d'une 
-    maquette faite sur Figma, j'ai réalisé ce site.Le développement de ce site m'as permis 
+    maquette faite sur Figma, j'ai réalisé ce site. Le développement de ce site m'a permis 
     d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
     `,
     image: "/images/eazy-website.png",
@@ -59,7 +59,7 @@ const projectsData: Project[] = [
     id: 4,
     title: "This Portfolio",
     description: `
-    Designé par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
+    Conçu par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
     m'est utile dans mon parcours scolaire mais aussi et surtout pour montrer mon travail 
     et mes compétences !
     `,
