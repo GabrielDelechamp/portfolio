@@ -18,7 +18,7 @@ const projectsData: Project[] = [
     title: "Eazy Media Website",
     description: `
     Ce site web m'a été demandé dans le cadre d'un stage pour Eazy Media. À l'aide d'une 
-    maquette faite sur Figma, j'ai réalisé ce site.Le développement de ce site m'as permis 
+    maquette faite sur Figma, j'ai réalisé ce site. Le développement de ce site m'a permis 
     d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
     `,
     image: "/images/eazy-website.png",
@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     d'accès en fonction des droits de l'utilisateur. Il gère ainsi de plus un système de
     création de compte et de connexion.
     `,
-    image: "/images/uianimation.jpg",
+    image: "/images/gestionconges.png",
     link: "",
     technologies: ["Laravel"],
     category: "game"
@@ -59,13 +59,24 @@ const projectsData: Project[] = [
     id: 4,
     title: "This Portfolio",
     description: `
-    Designé par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
+    Conçu par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
     m'est utile dans mon parcours scolaire mais aussi et surtout pour montrer mon travail 
     et mes compétences !
     `,
     image: "/images/portfolio.png",
     link: "",
     technologies: ["React"],
+    category: "animation"
+  },
+  {
+    id: 5,
+    title: "Trajectory Calculator",
+    description: `
+    Ce projet fut fait en groupe sur 3 jours. Le but de ce logiciel est de calculer le trajet le plus court entre différentes villes de France. Apres ce calcul, le trajet est affiché sur une carte.
+    `,
+    image: "/images/calculator.png",
+    link: "",
+    technologies: ["C#", "JavaScript"],
     category: "animation"
   },
 ];

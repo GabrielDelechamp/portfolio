@@ -133,7 +133,7 @@ export default function AboutTabs() {
 
   const AboutMe = () => {
     return (
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas interdum massa id mi placerat, et auctor nisi blandit. Pellentesque sollicitudin quis sem faucibus laoreet. Sed egestas metus at nisi eleifend luctus. Mauris eget nulla at diam fermentum tristique. Donec neque elit, iaculis et nunc sit amet, eleifend fermentum elit. Phasellus ut mattis augue. Morbi a nisi in sem lacinia luctus vitae id eros. Fusce eget nibh vel arcu finibus egestas. Donec finibus leo sagittis cursus porta. In pellentesque eros eget ipsum ornare, eget lacinia erat dignissim.`
+      `Passionné par le développement web et les nouvelles technologies, je suis actuellement en deuxième année de BTS SIO option SLAM. Après une première année en faculté de mathématiques, j’ai choisi de me réorienter vers l’informatique pour allier logique et créativité dans mes projets. Je maîtrise principalement Laravel, React.js, Tailwind CSS et Supabase, et j’accorde une importance particulière au développement responsive et à l’expérience utilisateur. J’ai travaillé sur plusieurs projets, dont une application de gestion d’absences en Laravel et une application d’analyse de données en React. Toujours curieux d’apprendre, je cherche à évoluer en alternance dans le domaine du développement d’applications, où je pourrais mettre à profit mes compétences et continuer à progresser.`
     );
   };
 

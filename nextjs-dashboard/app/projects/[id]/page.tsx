@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     d'accès en fonction des droits de l'utilisateur. Il gère ainsi de plus un système de
     création de compte et de connexion.
     `,
-    image: "/images/uianimation.jpg",
+    image: "/images/gestionconges.png",
     link: "",
     technologies: ["Laravel"],
     category: "game"
@@ -66,6 +66,17 @@ const projectsData: Project[] = [
     image: "/images/portfolio.png",
     link: "",
     technologies: ["React"],
+    category: "animation"
+  },
+  {
+    id: 5,
+    title: "Trajectory Calculator",
+    description: `
+    Ce projet fut fait en groupe sur 3 jours. Le but de ce logiciel est de calculer le trajet le plus court entre différentes villes de France. Apres ce calcul, le trajet est affiché sur une carte.
+    `,
+    image: "/images/calculator.png",
+    link: "",
+    technologies: ["C#", "JavaScript"],
     category: "animation"
   },
 ];
