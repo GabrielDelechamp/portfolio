@@ -1,6 +1,7 @@
 'use client';
-import SkillsSection from './skill-section';
-import HobbyRoom from './hobby-room';
+import SkillsSection from './aboutme/skill-section';
+import HobbyRoom from './aboutme/hobby-room';
+import ExperienceTimeline from './career/experience-timeline';
 import React, { useState } from 'react';
 import { 
   ChevronDown, 
@@ -161,26 +162,10 @@ export default function AboutTabs() {
             folderColor="text-green-400"
             onSelect={handleSelect}
           >
-            <SidebarItem value="hobby1" onSelect={handleSelect}>
-              Hobby 1
-            </SidebarItem>
-            <SidebarItem value="hobby2" onSelect={handleSelect}>
-              Hobby 2
+            <SidebarItem value="eduaction" onSelect={handleSelect}>
+              Education
             </SidebarItem>
           </CollapsibleSection>
-        </CollapsibleSection>
-
-        <CollapsibleSection 
-          title="contacts" 
-          folderColor="text-red-400"
-          onSelect={handleSelect}
-        >
-          <SidebarItem value="email" icon={Mail} onSelect={handleSelect}>
-            Email
-          </SidebarItem>
-          <SidebarItem value="phone" icon={Phone} onSelect={handleSelect}>
-            Phone
-          </SidebarItem>
         </CollapsibleSection>
       </div>
 
@@ -198,20 +183,20 @@ export default function AboutTabs() {
                 <HobbyRoom />
               </div>
             </div>
-            
+          </TabsContent>
+
+
+          <TabsContent value="eduaction">
+            <div className='flex flex-row'>
+              <div className="w-[50%] flex flex-col justify-center item-center gap-10">
+                <ExperienceTimeline />
+              </div>
+            </div>
           </TabsContent>
 
 
 
-          <TabsContent value="email">
-            <h2 className="text-2xl font-bold mb-4">Email Contact</h2>
-            <p>user@gmail.com</p>
-          </TabsContent>
-          
-          <TabsContent value="phone">
-            <h2 className="text-2xl font-bold mb-4">Phone Contact</h2>
-            <p>+359824639</p>
-          </TabsContent>
+
         </Tabs>
       </div>
     </div>

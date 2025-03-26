@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  link: string;
   technologies: string[];
   category: string;
 }
@@ -21,6 +22,7 @@ const projectsData: Project[] = [
     d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
     `,
     image: "/images/eazy-website.png",
+    link: "https://eazy-media.fr/",
     technologies: ["HTML", "CSS"],
     category: "animation"
   },
@@ -34,6 +36,7 @@ const projectsData: Project[] = [
     création de compte et de connexion.
     `,
     image: "/images/uianimation.jpg",
+    link: "",
     technologies: ["Laravel"],
     category: "game"
   },
@@ -48,6 +51,7 @@ const projectsData: Project[] = [
     une gestion de CRUD.
     `,
     image: "/images/carspot_1.png",
+    link: "",
     technologies: ["React"],
     category: "blockchain"
   },
@@ -60,6 +64,7 @@ const projectsData: Project[] = [
     et mes compétences !
     `,
     image: "/images/portfolio.png",
+    link: "",
     technologies: ["React"],
     category: "animation"
   },
@@ -69,6 +74,11 @@ const ProjectDetail: React.FC = () => {
   const { id } = useParams();
   const router = useRouter(); // Hook pour la navigation
   const projectId = Number(id);
+
+  if (isNaN(projectId)) {
+    return <p className="text-red-500">ID de projet invalide</p>;
+  }
+
   const project = projectsData.find((project) => project.id === projectId);
 
   if (!project) {
@@ -84,6 +94,15 @@ const ProjectDetail: React.FC = () => {
         ← Retour à la liste des projets
       </button>
 
+      {project.link && (
+        <a 
+          className="m-6 px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 text-white rounded-lg transition duration-200" 
+          href={project.link} target="_blank" rel="noopener noreferrer"
+        >
+          Voir le projet
+        </a>
+      )}
+
       <h1 className="text-2xl font-bold mb-4">{project.title}</h1>
       <img
         src={project.image}
@@ -91,9 +110,10 @@ const ProjectDetail: React.FC = () => {
         className="rounded-lg w-full object-cover mb-6"
       />
       <p className="text-gray-400 mb-4">{project.description}</p>
-      <h3 className="text-lg font-semibold mb-2">Technologies:</h3>
+      
+      <h3 className="text-lg font-semibold mb-2">Technologies :</h3>
       <ul className="list-disc list-inside text-gray-300">
-        {project.technologies.map((tech: string, index: number) => (
+        {project.technologies.map((tech, index) => (
           <li key={index}>{tech}</li>
         ))}
       </ul>

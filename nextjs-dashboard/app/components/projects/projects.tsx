@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  link: string;
   technologies: string[];
   category: string;
 }
@@ -21,6 +22,7 @@ const projectsData: Project[] = [
     d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
     `,
     image: "/images/eazy-website.png",
+    link: "https://eazy-media.fr/",
     technologies: ["HTML", "CSS"],
     category: "animation"
   },
@@ -34,6 +36,7 @@ const projectsData: Project[] = [
     création de compte et de connexion.
     `,
     image: "/images/uianimation.jpg",
+    link: "",
     technologies: ["Laravel"],
     category: "game"
   },
@@ -48,6 +51,7 @@ const projectsData: Project[] = [
     une gestion de CRUD.
     `,
     image: "/images/carspot_1.png",
+    link: "",
     technologies: ["React"],
     category: "blockchain"
   },
@@ -60,10 +64,12 @@ const projectsData: Project[] = [
     et mes compétences !
     `,
     image: "/images/portfolio.png",
+    link: "",
     technologies: ["React"],
     category: "animation"
   },
 ];
+
 
 interface ProjectsProps {
   filters: Filters;
