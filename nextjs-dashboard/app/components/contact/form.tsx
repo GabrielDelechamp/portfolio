@@ -27,7 +27,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col min-w-[500px] p-6 rounded-md shadow-md space-y-4"
+      className="flex flex-col min-w-[500px] p-6 rounded-md space-y-4"
     >
       <label htmlFor="name" className="text-sm font-medium">
         _name:
@@ -38,7 +38,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
         name="name"
         value={formData.name}
         onChange={handleInputChange}
-        className="p-2 bg-[#011221] border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
+        className="p-2 dark:bg-[#011221] border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
         required
       />
 
@@ -51,7 +51,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
         name="email"
         value={formData.email}
         onChange={handleInputChange}
-        className="p-2 bg-[#011221]  border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
+        className="p-2 dark:bg-[#011221]  border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
         required
       />
 
@@ -64,14 +64,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
         value={formData.message}
         onChange={handleInputChange}
         placeholder="Write your message..."
-        className="p-2 bg-[#011221]  border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
+        className="p-2 dark:bg-[#011221]  border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
         rows={5} // rows attend un nombre
         required
       ></textarea>
 
       <button
         type="submit"
-        className="px-4 py-2 bg-[#1E2D3D] hover:bg-[#1E2D33] text-gray-100 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
+        className="px-4 py-2 bg-gray-300 hover:bg-gray-400 dark:bg-[#1E2D3D] dark:hover:bg-[#1E2D33] dark:text-gray-100 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
       >
         submit-message
       </button>

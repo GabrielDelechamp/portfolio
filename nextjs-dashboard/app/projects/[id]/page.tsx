@@ -100,14 +100,14 @@ const ProjectDetail: React.FC = () => {
     <div className="max-w-4xl py-10 mx-auto h-[100%] overflow-y-auto">
       <button
         onClick={() => router.push('/projects')}
-        className="mb-6 px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 text-white rounded-lg transition duration-200"
+        className="mb-6 px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-400 dark:text-white rounded-lg transition duration-200"
       >
         ← Retour à la liste des projets
       </button>
 
       {project.link && (
         <a 
-          className="m-6 px-4 py-2 bg-gray-800 text-gray-300 hover:bg-gray-700 text-white rounded-lg transition duration-200" 
+          className="m-6 px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-400 dark:text-white rounded-lg transition duration-200" 
           href={project.link} target="_blank" rel="noopener noreferrer"
         >
           Voir le projet
@@ -120,10 +120,10 @@ const ProjectDetail: React.FC = () => {
         alt={project.title}
         className="rounded-lg w-full object-cover mb-6"
       />
-      <p className="text-gray-400 mb-4">{project.description}</p>
+      <p className="dark:text-gray-400 mb-4">{project.description}</p>
       
       <h3 className="text-lg font-semibold mb-2">Technologies :</h3>
-      <ul className="list-disc list-inside text-gray-300">
+      <ul className="list-disc list-inside dark:text-gray-300">
         {project.technologies.map((tech, index) => (
           <li key={index}>{tech}</li>
         ))}

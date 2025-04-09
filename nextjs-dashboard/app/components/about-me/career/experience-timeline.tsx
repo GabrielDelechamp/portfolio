@@ -35,7 +35,7 @@ const ExperienceTimeline = () => {
   };
 
   return (
-    <div className="w-[200%] mx-auto p-6 shadow-lg rounded-2xl">
+    <div className="w-[200%] mx-auto p-6 rounded-2xl">
       <h2 className="text-2xl font-bold text-center mb-6">Mon Parcours</h2>
       <div className="space-y-4">
         {experiences.map((exp, index) => (
@@ -55,7 +55,7 @@ const ExperienceTimeline = () => {
               }`}
             >
               <p className="text-gray-700 underline"><strong>//Établissement :{exp.institution}</strong></p>
-              <p className="text-white"><span className="text-[#4D5BCE]">console</span>.log(<span className="text-[#43D9AD]">experience.details</span>)</p>
+              <p className="dark:text-white"><span className="text-[#4D5BCE]">console</span>.log(<span className="text-[#43D9AD]">experience.details</span>)</p>
               <p className="mt-2">{exp.details}</p>
             </div>
           </div>

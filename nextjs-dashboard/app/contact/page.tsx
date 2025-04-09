@@ -10,12 +10,12 @@ export default function Page() {
   return (
     <main className="flex h-[100%]">
       <SideBar />
-      <div className="flex flex-row h-[100%] justify-around items-center p-6 w-full">
+      <div className="flex flex-row h-[100%] justify-around items-center  w-full">
         {/* Pass the form data and updater function to the form */}
         <Form formData={formData} onFormDataChange={setFormData} />
-        <div className='h-[106.5%] border-r-2 border-[#1E2D3D]'></div>
-        {/* Pass the form data to FakeCode */}
-        <FakeCode {...formData} />
+        <div className='h-[100%] border-l-2 border-[#1E2D3D] flex flex-col items-center justify-center'>
+          <FakeCode {...formData} />
+        </div>
       </div>
     </main>
   );

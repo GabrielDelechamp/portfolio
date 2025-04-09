@@ -98,8 +98,8 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
 
   return (
     <div className='max-w-[1190px] py-[50px] mx-auto overflow-y-auto'>
-      <p>
-        <dl className="text-white">
+      <p className='ml-10'>
+        <dl className="dark:text-white">
           <dd><span className="text-[#43D9AD]">projects</span>.forEach(<span className="text-[#4D5BCE]">function</span>(<span className="text-[#FEA55F]">project</span>) &#123;</dd>
           <dd className='pl-[30px]'><span className="text-[#4D5BCE]">console</span>.log(<span className="text-[#43D9AD]">project</span>);</dd>
           <dd>&#125;)</dd>
@@ -110,12 +110,12 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
           filteredProjects.map((project) => (
             <div key={project.id} className="max-w-[370px] flex flex-col">
               <h3 className="text-lg font-semibold mb-2">
-                <span className="text-[#5565E8]">Project {project.id}</span> //{" "}
+                <span className="text-[#5565E8]">Project {project.id}</span> //{""}
                 <span className="italic">
                   _{project.title.toLowerCase().replace(/\s+/g, '-')}
                 </span>
               </h3>
-              <div className="bg-[#011221] rounded-lg border-2 border-[#1E2D3D] overflow-hidden">
+              <div className="dark:bg-[#011221] rounded-lg border-2 border-[#1E2D3D] overflow-hidden">
                 <div className="relative">
                   <img
                     src={project.image}
@@ -126,7 +126,7 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
                     {project.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="bg-gray-800 text-gray-300 px-2 py-1 rounded text-xs"
+                        className="dark:bg-gray-800 bg-gray-200 dark:text-gray-300 px-2 py-1 rounded text-xs"
                       >
                         {tech}
                       </span>
@@ -134,9 +134,9 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="text-gray-400 mb-4">{project.description.substring(0,50-3)+"..."}</p>
+                  <p className="dark:text-gray-400 mb-4">{project.description.substring(0,50-3)+"..."}</p>
                   <Link href={`/projects/${project.id}`}>
-                    <button className="bg-gray-800 text-gray-300 px-4 py-2 rounded hover:bg-gray-700 transition-colors">
+                    <button className="bg-gray-200 dark:bg-gray-800 dark:text-gray-300 px-4 py-2 rounded dark:hover:bg-gray-700 hover:bg-gray-300 transition-colors">
                       View Project
                     </button>
                   </Link>

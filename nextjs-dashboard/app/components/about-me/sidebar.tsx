@@ -52,7 +52,7 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({
           setIsOpen(!isOpen);
           onSelect?.(title);
         }}
-        className="w-full flex items-center text-gray-300 hover:text-white p-2 rounded transition-colors"
+        className="w-full flex items-center dark:text-gray-300 hover:text-gray-700 dark:hover:text-white p-2 rounded transition-colors"
       >
         {children && (isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />)}
         <Folder size={16} className={`ml-1 mr-2 ${folderColor}`} />
@@ -76,7 +76,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
 }) => (
   <button
     onClick={() => onSelect?.(value)}
-    className={`w-full flex items-center text-gray-400 hover:text-white p-2 rounded transition-colors ${indent ? 'ml-6' : ''}`}
+    className={`w-full flex items-center dark:text-gray-400 dark:hover:text-white p-2 rounded transition-colors ${indent ? 'ml-6' : ''}`}
   >
     <Icon size={16} className="mr-2" />
     <span className="text-sm">{children}</span>
@@ -140,7 +140,7 @@ export default function AboutTabs() {
   return (
     <div className="flex h-[100%]">
       {/* Sidebar */}
-      <div className="w-[285px] border-r-2 border-[#1E2D3D] text-white p-4">
+      <div className="w-[285px] border-r-2 border-[#1E2D3D] text-black dark:text-white p-4">
         <CollapsibleSection 
           title="personal-info" 
           folderColor="text-orange-400"

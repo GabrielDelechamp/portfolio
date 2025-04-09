@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Folder, FileText, ChevronDown, ChevronRight } from 'lucide-react';
+import { Folder, ChevronDown, ChevronRight } from 'lucide-react';
 import { FaReact, FaLaravel, FaPhp, FaGithub, FaNodeJs, FaCss3Alt, FaHtml5, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiGraphql, SiSupabase, SiJavascript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -46,9 +46,9 @@ const Sidebar: React.FC<SidebarProps> = ({ filters, setFilters }) => {
               id={tech.id}
               checked={filters[tech.id]}
               onChange={() => handleFilterChange(tech.id)}
-              className="relative mr-3 w-6 h-6 rounded-sm bg-[#011627] border-2 border-[#607B96] checked:bg-[#607B96] focus:outline-none focus:ring-2 focus:ring-[#607B96] focus:ring-offset-2 focus:ring-offset-gray-800 focus:checked:bg-[#607B96] checked:hover:bg-[#607B96] focus:checked:hover:bg-[#607B96]"
+              className="relative mr-3 w-6 h-6 rounded-sm bg-gray-100 dark:bg-transparent border-2 border-gray-300 dark:border-gray-600 checked:bg-[#43D9AD] focus:outline-none focus:ring-2 focus:ring-[#43D9AD] focus:ring-offset-2 focus:ring-offset-white"
             />
-            <label htmlFor={tech.id} className="flex items-center cursor-pointer">
+            <label htmlFor={tech.id} className="flex items-center cursor-pointer text-gray-700 dark:text-gray-100">
               <span className="mr-2">{tech.icon}</span>
               {tech.label}
             </label>
@@ -70,7 +70,7 @@ const CollapsibleSection: React.FC<{
     <div className="mb-2">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center text-gray-300 hover:text-white p-2 rounded transition-colors"
+        className="w-full flex items-center text-gray-600 hover:text-black dark:text-white dark:hover:text-gray-200 p-2 rounded transition-colors"
       >
         {children && (isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />)}
         <Folder size={16} className={`ml-1 mr-2 ${folderColor}`} />
