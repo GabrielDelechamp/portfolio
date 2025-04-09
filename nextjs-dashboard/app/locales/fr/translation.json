@@ -1,0 +1,66 @@
+{
+    "welcome": "Bonjour à tous. Je m'appelle",
+    "i'll add content on this page later": "j'ajouterai du contenu sur cette page plus tard",
+    "you can still check my github": "vous pouvez quand même jeter un œil à mon github",
+    "Web-Dev Student": "Étudiant en développement Web",
+    "name": "nom",
+    "email": "email",
+    "message": "message",
+    "Write your message...": "Écrivez votre message...",
+    "submit-message": "envoyer-message",
+    "Contact-me !": "Contactez-moi !",
+    "personal-info": "infos-personnelles",
+    "bio": "bio",
+    "About Me": "À propos de moi",
+    "career": "carrière",
+    "Education": "Éducation",
+    "aboutmeparagraph": "Passionné par le développement web et les nouvelles technologies, je suis actuellement en deuxième année de BTS SIO option SLAM. Après une première année en faculté de mathématiques, j’ai choisi de me réorienter vers l’informatique pour allier logique et créativité dans mes projets. Je maîtrise principalement Laravel, React.js, Tailwind CSS et Supabase, et j’accorde une importance particulière au développement responsive et à l’expérience utilisateur. J’ai travaillé sur plusieurs projets, dont une application de gestion d’absences en Laravel et une application d’analyse de données en React. Toujours curieux d’apprendre, je cherche à évoluer en alternance dans le domaine du développement d’applications, où je pourrais mettre à profit mes compétences et continuer à progresser.",
+    "My Skills": "Mes compétences",
+    "My passions": "Mes passions",
+    "Dev": "Dev",
+    "Drawing": "Dessin",
+    "Gaming": "Jeux vidéo",
+    "Music": "Musique",
+    "General Baccalaureate": "Baccalauréat général",
+    "Specializations in Mathematics and Physics-Chemistry. Acquisition of a solid foundation in science, logic and analytical reasoning.": 
+      "Spécialités en Mathématiques et Physique-Chimie. Acquisition d'une base solide en sciences, logique et raisonnement analytique.",
+    "1st year of Faculty of Mathematics": "1ère année de faculté de mathématiques",
+    "Bachelor's year in mathematics with courses in analysis, algebra and algorithms before reorienting myself towards computer science.": 
+      "Année de licence en mathématiques avec des cours d'analyse, d'algèbre et d'algorithmes avant de me réorienter vers l'informatique.",
+    "Training in application development, database management, APIs, and frameworks like Laravel and React.": 
+      "Formation en développement d'applications, gestion de bases de données, APIs et frameworks comme Laravel et React.",
+    "Future Course": "Parcours futur",
+    "To complete": "À compléter",
+    "Possibility of continuing with a work-study program or other training in application development. The goal is to obtain a master's degree in application development.": 
+      "Possibilité de poursuivre en alternance ou autre formation en développement d'applications. L'objectif est d'obtenir un master en développement d'applications.",
+    "Institution": "Établissement",
+    "My Course": "Mon parcours",
+    "Project": "Projet",
+    "View Project": "Voir le projet",
+    "No projects match the selected filters.": "Aucun projet ne correspond aux filtres sélectionnés.",
+    "Filter by techno": "Filtrer par techno",
+    "Invalid Project ID": "ID de projet invalide",
+    "Project not found": "Projet non trouvé",
+    "Back to project list": "Retour à la liste des projets",
+    "Let's have a look to the project": "Jetons un œil au projet",
+    "Eazy Media Website": "Site Web Eazy Media",
+    "This website was commissioned as part of an internship at Eazy Media. I created it using a mockup created in Figma. Developing this site allowed me to deepen and expand my knowledge of native HTML/CSS.": 
+      "Ce site Web a été commandé dans le cadre d’un stage chez Eazy Media. Je l’ai créé à partir d’une maquette réalisée sur Figma. Le développement de ce site m’a permis d’approfondir et d’élargir mes connaissances en HTML/CSS natif.",
+    "Leave management": "Gestion des absences",
+    "This project was a guiding principle for learning the Laravel framework. It interacts with a database and allows CRUD and permission management, and manages access restrictions based on user rights. It also manages an account creation and login system.": 
+      "Ce projet a été un fil conducteur dans l’apprentissage du framework Laravel. Il interagit avec une base de données et permet la gestion du CRUD, des permissions et des restrictions d’accès selon les droits utilisateur. Il gère aussi un système de création de compte et de connexion.",
+    "This project is part of my second internship. Its goal is to graphically process and analyze data from a mobile application associated with the company. Carspot Analytics provides a wealth of graphs and data on users and other features of the mobile application. It also includes CRUD management.": 
+      "Ce projet fait partie de mon deuxième stage. Son objectif est de traiter et analyser graphiquement les données d’une application mobile liée à l’entreprise. Carspot Analytics fournit de nombreux graphiques et données sur les utilisateurs et d'autres fonctionnalités de l’application mobile. Il inclut également une gestion CRUD.",
+    "This Portfolio": "Ce portfolio",
+    "Designed by me, this portfolio reflects my personality: understated and innovative. This project is useful for my academic career, but also, and more importantly, it showcases my work and my skills!": 
+      "Conçu par mes soins, ce portfolio reflète ma personnalité : sobre et innovante. Ce projet est utile pour mon parcours académique, mais surtout, il met en avant mon travail et mes compétences !",
+    "Trajectory Calculator": "Calculateur de trajectoire",
+    "This project was completed as a group over three days. The goal of this software is to calculate the shortest route between different cities in France. After this calculation, the route is displayed on a map.": 
+      "Ce projet a été réalisé en groupe sur trois jours. Le but de ce logiciel est de calculer le plus court trajet entre différentes villes en France. Une fois le calcul effectué, l’itinéraire est affiché sur une carte.",
+    "hello": "bonjour",
+    "about-me": "à-propos",
+    "projects": "projets",
+    "contact-me": "contactez-moi",
+    "Find me on": "Retrouvez-moi sur"
+  }
+  

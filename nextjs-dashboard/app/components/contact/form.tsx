@@ -1,4 +1,6 @@
 import React, { ChangeEvent, FormEvent } from "react";
+import { useTranslation } from 'react-i18next';
+
 
 // Définir le type pour les données du formulaire
 interface FormData {
@@ -23,6 +25,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
+  const { t } = useTranslation();
 
   return (
     <form
@@ -30,7 +33,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
       className="flex flex-col min-w-[500px] p-6 rounded-md space-y-4"
     >
       <label htmlFor="name" className="text-sm font-medium">
-        _name:
+        _{t("name")}:
       </label>
       <input
         type="text"
@@ -43,7 +46,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
       />
 
       <label htmlFor="email" className="text-sm font-medium">
-        _email:
+        _{t("email")}:
       </label>
       <input
         type="email"
@@ -56,14 +59,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
       />
 
       <label htmlFor="message" className="text-sm font-medium">
-        _message:
+        _{t("message")}:
       </label>
       <textarea
         id="message"
         name="message"
         value={formData.message}
         onChange={handleInputChange}
-        placeholder="Write your message..."
+        placeholder={t("Write your message...")}
         className="p-2 dark:bg-[#011221]  border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
         rows={5} // rows attend un nombre
         required
@@ -73,7 +76,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ formData, onFormDataChange })
         type="submit"
         className="px-4 py-2 bg-gray-300 hover:bg-gray-400 dark:bg-[#1E2D3D] dark:hover:bg-[#1E2D33] dark:text-gray-100 font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-[#1E2D3D]"
       >
-        submit-message
+        {t("submit-message")}
       </button>
     </form>
   );

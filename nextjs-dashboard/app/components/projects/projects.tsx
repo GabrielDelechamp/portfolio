@@ -1,6 +1,9 @@
 import React from 'react';
 import { Filters } from './sidebar';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { projectsData } from "@/data/projectsData";
+
 
 interface Project {
   id: number;
@@ -12,74 +15,6 @@ interface Project {
   category: string;
 }
 
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "Eazy Media Website",
-    description: `
-    Ce site web m'a été demandé dans le cadre d'un stage pour Eazy Media. À l'aide d'une 
-    maquette faite sur Figma, j'ai réalisé ce site. Le développement de ce site m'a permis 
-    d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
-    `,
-    image: "/images/eazy-website.png",
-    link: "https://eazy-media.fr/",
-    technologies: ["HTML", "CSS"],
-    category: "animation"
-  },
-  {
-    id: 2,
-    title: "Leave management",
-    description: `
-    Ce projet fût un projet fil rouge pour l'apprentissage du framework Laravel. Il intéragit
-    avec une base de données et permet la gestion de CRUD, de droits et gère une restriction
-    d'accès en fonction des droits de l'utilisateur. Il gère ainsi de plus un système de
-    création de compte et de connexion.
-    `,
-    image: "/images/gestionconges.png",
-    link: "",
-    technologies: ["Laravel"],
-    category: "game"
-  },
-  {
-    id: 3,
-    title: "Carspot Analytics",
-    description: `
-    Ce projet est celui de mon deuxième stage. Il a pour but de traiter et d'analyser de 
-    façon graphique les données d'une application mobile associée à l'entreprise. Ainsi, 
-    sur Carspot Analytics, on y retrouve tout un tas de graphiques et de données sur les 
-    utilisateurs et les autres fonctionnalités de l'application mobile. On y retrouve de plus 
-    une gestion de CRUD.
-    `,
-    image: "/images/carspot_1.png",
-    link: "",
-    technologies: ["React"],
-    category: "blockchain"
-  },
-  {
-    id: 4,
-    title: "This Portfolio",
-    description: `
-    Conçu par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
-    m'est utile dans mon parcours scolaire mais aussi et surtout pour montrer mon travail 
-    et mes compétences !
-    `,
-    image: "/images/portfolio.png",
-    link: "",
-    technologies: ["React"],
-    category: "animation"
-  },
-  {
-    id: 5,
-    title: "Trajectory Calculator",
-    description: `
-    Ce projet fut fait en groupe sur 3 jours. Le but de ce logiciel est de calculer le trajet le plus court entre différentes villes de France. Apres ce calcul, le trajet est affiché sur une carte.
-    `,
-    image: "/images/calculator.png",
-    link: "",
-    technologies: ["C#", "JavaScript"],
-    category: "animation"
-  },
-];
 
 
 interface ProjectsProps {
@@ -95,6 +30,8 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
     if (activeFilters.length === 0) return true; // Si aucun filtre actif, afficher tout
     return project.technologies.some((tech) => activeFilters.includes(tech.toLowerCase()));
   });
+  const { t } = useTranslation();
+
 
   return (
     <div className='max-w-[1190px] py-[50px] mx-auto overflow-y-auto'>
@@ -110,9 +47,9 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
           filteredProjects.map((project) => (
             <div key={project.id} className="max-w-[370px] flex flex-col">
               <h3 className="text-lg font-semibold mb-2">
-                <span className="text-[#5565E8]">Project {project.id}</span> //{""}
+                <span className="text-[#5565E8]">{t("Project")} {project.id}</span> //{""}
                 <span className="italic">
-                  _{project.title.toLowerCase().replace(/\s+/g, '-')}
+                  _{t(project.title).toLowerCase().replace(/\s+/g, '-')}
                 </span>
               </h3>
               <div className="dark:bg-[#011221] rounded-lg border-2 border-[#1E2D3D] overflow-hidden">
@@ -134,10 +71,10 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="dark:text-gray-400 mb-4">{project.description.substring(0,50-3)+"..."}</p>
+                  <p className="dark:text-gray-400 mb-4">{t(project.description).substring(0,50-3)+"..."}</p>
                   <Link href={`/projects/${project.id}`}>
                     <button className="bg-gray-200 dark:bg-gray-800 dark:text-gray-300 px-4 py-2 rounded dark:hover:bg-gray-700 hover:bg-gray-300 transition-colors">
-                      View Project
+                      {t("View Project")}
                     </button>
                   </Link>
                 </div>
@@ -145,7 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ filters }) => {
             </div>
           ))
         ) : (
-          <p className="text-gray-400">No projects match the selected filters.</p>
+          <p className="text-gray-400">{t("No projects match the selected filters.")}</p>
         )}
       </div>
       </div>

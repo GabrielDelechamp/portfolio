@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -86,6 +87,7 @@ export default function AboutTabs() {
   const handleSelect = (value: string) => {
     setActiveTab(value);
   };
+  const { t } = useTranslation();
 
 
   return (
@@ -96,7 +98,7 @@ export default function AboutTabs() {
           onSelect={handleSelect}
         >
           <SidebarItem value="email" icon={Mail} onSelect={handleSelect}>
-          <a href="mailto:gabriel.delechamp.pro@gmail.com">Contact-me !</a>
+          <a href="mailto:gabriel.delechamp.pro@gmail.com">{t("Contact-me !")}</a>
           </SidebarItem>
         </CollapsibleSection>
       </div>

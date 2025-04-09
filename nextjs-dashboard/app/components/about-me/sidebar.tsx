@@ -3,6 +3,7 @@ import SkillsSection from './aboutme/skill-section';
 import HobbyRoom from './aboutme/hobby-room';
 import ExperienceTimeline from './career/experience-timeline';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -85,6 +86,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
 
 export default function AboutTabs() {
   const [activeTab, setActiveTab] = useState("bio");
+  const { t } = useTranslation();
 
   const handleSelect = (value: string) => {
     setActiveTab(value);
@@ -133,7 +135,7 @@ export default function AboutTabs() {
 
   const AboutMe = () => {
     return (
-      `Passionné par le développement web et les nouvelles technologies, je suis actuellement en deuxième année de BTS SIO option SLAM. Après une première année en faculté de mathématiques, j’ai choisi de me réorienter vers l’informatique pour allier logique et créativité dans mes projets. Je maîtrise principalement Laravel, React.js, Tailwind CSS et Supabase, et j’accorde une importance particulière au développement responsive et à l’expérience utilisateur. J’ai travaillé sur plusieurs projets, dont une application de gestion d’absences en Laravel et une application d’analyse de données en React. Toujours curieux d’apprendre, je cherche à évoluer en alternance dans le domaine du développement d’applications, où je pourrais mettre à profit mes compétences et continuer à progresser.`
+      t("aboutmeparagraph")
     );
   };
 
@@ -142,28 +144,28 @@ export default function AboutTabs() {
       {/* Sidebar */}
       <div className="w-[285px] border-r-2 border-[#1E2D3D] text-black dark:text-white p-4">
         <CollapsibleSection 
-          title="personal-info" 
+          title={t("personal-info")} 
           folderColor="text-orange-400"
           defaultOpen
           onSelect={handleSelect}
         >
           <CollapsibleSection 
-            title="bio" 
+            title={t("bio")} 
             folderColor="text-blue-400"
             onSelect={handleSelect}
           >
             <SidebarItem value="aboutme" onSelect={handleSelect}>
-              About Me
+              {t("About Me")}
             </SidebarItem>
           </CollapsibleSection>
 
           <CollapsibleSection 
-            title="career" 
+            title={t("career")} 
             folderColor="text-green-400"
             onSelect={handleSelect}
           >
             <SidebarItem value="eduaction" onSelect={handleSelect}>
-              Education
+              {t("Education")}
             </SidebarItem>
           </CollapsibleSection>
         </CollapsibleSection>
@@ -185,7 +187,6 @@ export default function AboutTabs() {
             </div>
           </TabsContent>
 
-
           <TabsContent value="eduaction">
             <div className='flex flex-row'>
               <div className="w-[50%] flex flex-col justify-center item-center gap-10">
@@ -193,10 +194,6 @@ export default function AboutTabs() {
               </div>
             </div>
           </TabsContent>
-
-
-
-
         </Tabs>
       </div>
     </div>

@@ -2,11 +2,14 @@
 import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 import { useEffect, useRef } from 'react';
 
 export default function Page() {
   const textRef = useRef<HTMLDivElement>(null);
   const hasRun = useRef(false);
+  const { t } = useTranslation();
+
 
   useEffect(() => {
     if (hasRun.current) return;
@@ -29,11 +32,11 @@ export default function Page() {
   return (
     <main className="flex h-full justify-center items-center flex-col p-6">
       <div>
-        <p className="text-gray-900 dark:text-white">Hi all. I am</p>
+        <p className="text-gray-900 dark:text-white">{t('welcome')}</p>
         <h1 className="text-gray-900 dark:text-white text-[64px]" ref={textRef}></h1>
-        <p className="text-indigo-700 dark:text-[#4D5BCE] text-[32px] pb-[70px]">&gt; Web-Dev Student</p>
-        <p className="text-gray-600 dark:text-[#607B96]">// i'll add content on this page later</p>
-        <p className="text-gray-600 dark:text-[#607B96]">// you can still check my github</p>
+        <p className="text-indigo-700 dark:text-[#4D5BCE] text-[32px] pb-[70px]">&gt; {t("Web-Dev Student")}</p>
+        <p className="text-gray-600 dark:text-[#607B96]">// {t("i'll add content on this page later")}</p>
+        <p className="text-gray-600 dark:text-[#607B96]">// {t("you can still check my github")}</p>
         <p>
           <span className="text-indigo-700 dark:text-[#4D5BCE]">const</span>{' '}
           <span className="text-emerald-600 dark:text-[#43D9AD]">githubLink</span>{' '}

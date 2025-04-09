@@ -1,99 +1,24 @@
 'use client'
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import { projectsData } from "@/data/projectsData";
+import { useTranslation } from 'react-i18next';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  link: string;
-  technologies: string[];
-  category: string;
-}
-
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "Eazy Media Website",
-    description: `
-    Ce site web m'a été demandé dans le cadre d'un stage pour Eazy Media. À l'aide d'une 
-    maquette faite sur Figma, j'ai réalisé ce site. Le développement de ce site m'a permis 
-    d'approfondir et de repousser mes connaissances en HTML/CSS natif. 
-    `,
-    image: "/images/eazy-website.png",
-    link: "https://eazy-media.fr/",
-    technologies: ["HTML", "CSS"],
-    category: "animation"
-  },
-  {
-    id: 2,
-    title: "Leave management",
-    description: `
-    Ce projet fût un projet fil rouge pour l'apprentissage du framework Laravel. Il intéragit
-    avec une base de données et permet la gestion de CRUD, de droits et gère une restriction
-    d'accès en fonction des droits de l'utilisateur. Il gère ainsi de plus un système de
-    création de compte et de connexion.
-    `,
-    image: "/images/gestionconges.png",
-    link: "",
-    technologies: ["Laravel"],
-    category: "game"
-  },
-  {
-    id: 3,
-    title: "Carspot Analytics",
-    description: `
-    Ce projet est celui de mon deuxième stage. Il a pour but de traiter et d'analyser de 
-    façon graphique les données d'une application mobile associée à l'entreprise. Ainsi, 
-    sur Carspot Analytics, on y retrouve tout un tas de graphiques et de données sur les 
-    utilisateurs et les autres fonctionnalités de l'application mobile. On y retrouve de plus 
-    une gestion de CRUD.
-    `,
-    image: "/images/carspot_1.png",
-    link: "",
-    technologies: ["React"],
-    category: "blockchain"
-  },
-  {
-    id: 4,
-    title: "This Portfolio",
-    description: `
-    Conçu par mes soins, ce portfolio est à mon image : sobre et innovant. Ce projet 
-    m'est utile dans mon parcours scolaire mais aussi et surtout pour montrer mon travail 
-    et mes compétences !
-    `,
-    image: "/images/portfolio.png",
-    link: "",
-    technologies: ["React"],
-    category: "animation"
-  },
-  {
-    id: 5,
-    title: "Trajectory Calculator",
-    description: `
-    Ce projet fut fait en groupe sur 3 jours. Le but de ce logiciel est de calculer le trajet le plus court entre différentes villes de France. Apres ce calcul, le trajet est affiché sur une carte.
-    `,
-    image: "/images/calculator.png",
-    link: "",
-    technologies: ["C#", "JavaScript"],
-    category: "animation"
-  },
-];
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
   const router = useRouter(); // Hook pour la navigation
   const projectId = Number(id);
+  const { t } = useTranslation();
 
   if (isNaN(projectId)) {
-    return <p className="text-red-500">ID de projet invalide</p>;
+    return <p className="text-red-500">{t("Invalid Project ID")}</p>;
   }
 
   const project = projectsData.find((project) => project.id === projectId);
 
   if (!project) {
-    return <p className="text-red-500">Project not found</p>;
+    return <p className="text-red-500">{t("Project not found")}</p>;
   }
 
   return (
@@ -102,7 +27,7 @@ const ProjectDetail: React.FC = () => {
         onClick={() => router.push('/projects')}
         className="mb-6 px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-400 dark:text-white rounded-lg transition duration-200"
       >
-        ← Retour à la liste des projets
+        ← {t("Back to project list")}
       </button>
 
       {project.link && (
@@ -110,7 +35,7 @@ const ProjectDetail: React.FC = () => {
           className="m-6 px-4 py-2 dark:bg-gray-800 bg-gray-300 dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-400 dark:text-white rounded-lg transition duration-200" 
           href={project.link} target="_blank" rel="noopener noreferrer"
         >
-          Voir le projet
+          {t("Let's have a look to the project")}
         </a>
       )}
 
@@ -120,7 +45,7 @@ const ProjectDetail: React.FC = () => {
         alt={project.title}
         className="rounded-lg w-full object-cover mb-6"
       />
-      <p className="dark:text-gray-400 mb-4">{project.description}</p>
+      <p className="dark:text-gray-400 mb-4">{t(project.description)}</p>
       
       <h3 className="text-lg font-semibold mb-2">Technologies :</h3>
       <ul className="list-disc list-inside dark:text-gray-300">

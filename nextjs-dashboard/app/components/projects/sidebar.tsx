@@ -3,6 +3,7 @@ import { Folder, ChevronDown, ChevronRight } from 'lucide-react';
 import { FaReact, FaLaravel, FaPhp, FaGithub, FaNodeJs, FaCss3Alt, FaHtml5, FaDatabase } from "react-icons/fa";
 import { SiTailwindcss, SiGraphql, SiSupabase, SiJavascript } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
+import { useTranslation } from 'react-i18next';
 
 interface Technology {
   id: string;
@@ -36,9 +37,11 @@ const Sidebar: React.FC<SidebarProps> = ({ filters, setFilters }) => {
     }));
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="w-[285px] flex-none p-4 border-r-2 border-[#1E2D3D]">
-      <CollapsibleSection title="Filtrer par technos" folderColor="text-blue-400">
+      <CollapsibleSection title={t("Filter by techno")} folderColor="text-blue-400">
         {technologies.map((tech) => (
           <div key={tech.id} className="flex items-center pt-3">
             <input

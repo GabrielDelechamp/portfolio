@@ -1,0 +1,66 @@
+{
+    "welcome": "Hi all. I am",
+    "i'll add content on this page later": "i'll add content on this page later",
+    "you can still check my github":"you can still check my github",
+    "Web-Dev Student":"Web-Dev Student",
+    "name":"name",
+    "email":"email",
+    "message":"message",
+    "Write your message...":"Write your message...",
+    "submit-message":"submit-message",
+    "Contact-me !":"Contact-me !",
+    "personal-info":"personal-info",
+    "bio":"bio",
+    "About Me":"About Me",
+    "career":"career",
+    "Education":"Education",
+    "aboutmeparagraph":"Passionate about web development and new technologies, I am currently in my second year of a BTS SIO with a SLAM option. After a first year in mathematics, I chose to reorient myself towards computer science to combine logic and creativity in my projects. I am mainly proficient in Laravel, React.js, Tailwind CSS and Supabase, and I place particular importance on responsive development and user experience. I have worked on several projects, including an absence management application in Laravel and a data analysis application in React. Always curious to learn, I am looking for a work-study program in the field of application development, where I could use my skills and continue to progress.",
+    "My Skills":"My Skills",
+    "My passions":"My passions",
+    "Dev":"Dev",
+    "Drawing":"Drawing",
+    "Gaming":"Gaming",
+    "Music":"Music",
+    "General Baccalaureate":"General Baccalaureate",
+    "Specializations in Mathematics and Physics-Chemistry. Acquisition of a solid foundation in science, logic and analytical reasoning.":
+    "Specializations in Mathematics and Physics-Chemistry. Acquisition of a solid foundation in science, logic and analytical reasoning.",
+    "1st year of Faculty of Mathematics":"1st year of Faculty of Mathematics",
+    "Bachelor's year in mathematics with courses in analysis, algebra and algorithms before reorienting myself towards computer science.":
+    "Bachelor's year in mathematics with courses in analysis, algebra and algorithms before reorienting myself towards computer science.",
+    "Training in application development, database management, APIs, and frameworks like Laravel and React.":
+    "Training in application development, database management, APIs, and frameworks like Laravel and React.",
+    "Future Course":"Future Course",
+    "To complete":"To complete",
+    "Possibility of continuing with a work-study program or other training in application development. The goal is to obtain a master's degree in application development.":
+    "Possibility of continuing with a work-study program or other training in application development. The goal is to obtain a master's degree in application development.",
+    "Institution":"Institution",
+    "My Course":"My Course",
+    "Project":"Project",
+    "View Project":"View Project",
+    "No projects match the selected filters.":"No projects match the selected filters.",
+    "Filter by techno":"Filter by techno",
+    "Invalid Project ID":"Invalid Project ID",
+    "Project not found":"Project not found",
+    "Back to project list":"Back to project list",
+    "Let's have a look to the project":"Let's have a look to the project",
+    "Eazy Media Website":"Eazy Media Website",
+    "This website was commissioned as part of an internship at Eazy Media. I created it using a mockup created in Figma. Developing this site allowed me to deepen and expand my knowledge of native HTML/CSS.":
+    "This website was commissioned as part of an internship at Eazy Media. I created it using a mockup created in Figma. Developing this site allowed me to deepen and expand my knowledge of native HTML/CSS.",
+    "Leave management":"Leave management",
+    "This project was a guiding principle for learning the Laravel framework. It interacts with a database and allows CRUD and permission management, and manages access restrictions based on user rights. It also manages an account creation and login system.":
+    "This project was a guiding principle for learning the Laravel framework. It interacts with a database and allows CRUD and permission management, and manages access restrictions based on user rights. It also manages an account creation and login system.",
+    "This project is part of my second internship. Its goal is to graphically process and analyze data from a mobile application associated with the company. Carspot Analytics provides a wealth of graphs and data on users and other features of the mobile application. It also includes CRUD management.":
+    "This project is part of my second internship. Its goal is to graphically process and analyze data from a mobile application associated with the company. Carspot Analytics provides a wealth of graphs and data on users and other features of the mobile application. It also includes CRUD management.",
+    "This Portfolio":"This Portfolio",
+    "Designed by me, this portfolio reflects my personality: understated and innovative. This project is useful for my academic career, but also, and more importantly, it showcases my work and my skills!":
+    "Designed by me, this portfolio reflects my personality: understated and innovative. This project is useful for my academic career, but also, and more importantly, it showcases my work and my skills!",
+    "Trajectory Calculator":"Trajectory Calculator",
+    "This project was completed as a group over three days. The goal of this software is to calculate the shortest route between different cities in France. After this calculation, the route is displayed on a map.":
+    "This project was completed as a group over three days. The goal of this software is to calculate the shortest route between different cities in France. After this calculation, the route is displayed on a map.",
+    "hello":"hello",
+    "about-me":"about-me",
+    "projects":"projects",
+    "contact-me":"contact-me",
+    "Find me on":"Find me on"
+  }
+  
