@@ -4,6 +4,7 @@ import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import { inter } from "@/app/ui/fonts";
 import "@/app/ui/global.css";
+import KonamiEasterEgg from "@/components/KonamiEasterEgg";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,8 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               text-[#1F2937] bg-white 
               dark:text-[#607B96] dark:bg-[#011627] border-[#1E2D3D]
               flex flex-col"
-            >
+              >
               <Navbar />
+              <KonamiEasterEgg/>
               <div className="h-[77vh]">{children}</div>
               <div className="grow">
                 <Footer />
