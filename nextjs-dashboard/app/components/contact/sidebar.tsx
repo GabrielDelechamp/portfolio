@@ -4,17 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { 
   ChevronDown, 
   ChevronRight, 
-  User, 
-  Book, 
-  GraduationCap, 
-  Phone, 
   Mail, 
-  School, 
   LucideIcon, 
   Folder, 
   FileText 
 } from 'lucide-react';
-import { Tabs, TabsContent } from "@/components/ui/tabs";
 
 interface CollapsibleSectionProps {
   title: string;
@@ -81,26 +75,34 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   </button>
 );
 
-export default function AboutTabs() {
+export default function Sidebar() {
   const [activeTab, setActiveTab] = useState("bio");
+  const { t } = useTranslation();
 
   const handleSelect = (value: string) => {
     setActiveTab(value);
   };
-  const { t } = useTranslation();
-
 
   return (
-      <div className="w-[332px] border-r-2 border-[#1E2D3D] text-white p-4 h-[100%]">
-        <CollapsibleSection 
-          title="contacts" 
-          folderColor="text-red-400"
-          onSelect={handleSelect}
-        >
-          <SidebarItem value="email" icon={Mail} onSelect={handleSelect}>
-          <a href="mailto:gabriel.delechamp.pro@gmail.com">{t("Contact-me !")}</a>
-          </SidebarItem>
-        </CollapsibleSection>
-      </div>
+    <div
+      className="
+        border-[#1E2D3D] text-white
+        md:w-[332px] md:border-r-2 md:h-full md:flex md:flex-col
+        w-full border-b-2 flex flex-row overflow-x-auto gap-4 p-2
+        bg-white dark:bg-[#011627]
+      "
+    >
+      <CollapsibleSection 
+        title="contacts" 
+        folderColor="text-red-400"
+        onSelect={handleSelect}
+      >
+        <SidebarItem value="email" icon={Mail} onSelect={handleSelect}>
+          <a href="mailto:gabriel.delechamp.pro@gmail.com">
+            {t("Contact-me !")}
+          </a>
+        </SidebarItem>
+      </CollapsibleSection>
+    </div>
   );
 }

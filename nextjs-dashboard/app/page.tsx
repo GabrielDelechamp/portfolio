@@ -33,7 +33,7 @@ export default function Page() {
     <main className="flex h-full justify-center items-center flex-col p-6">
       <div>
         <p className="text-gray-900 dark:text-white">{t('welcome')}</p>
-        <h1 className="text-gray-900 dark:text-white text-[64px]" ref={textRef}></h1>
+        <h1 className="text-gray-900 dark:text-white sm:text-[64px] text-[55px]" ref={textRef}></h1>
         <p className="text-indigo-700 dark:text-[#4D5BCE] text-[32px] pb-[70px]">&gt; {t("Web-Dev Student")}</p>
         <p className="text-gray-600 dark:text-[#607B96]">// {t("i'll add content on this page later")}</p>
         <p className="text-gray-600 dark:text-[#607B96]">// {t("you can still check my github")}</p>
